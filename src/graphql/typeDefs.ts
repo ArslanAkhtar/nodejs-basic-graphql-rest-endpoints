@@ -14,6 +14,7 @@ const typeDefs = `#graphql
   type Query {
     books: [Book]
     authors: [Author]
+    bookById(id: Int!): Book
   }
 `;
 

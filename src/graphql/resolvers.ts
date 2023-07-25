@@ -14,6 +14,9 @@ const resolvers = {
   },
   Query: {
     books: () => books,
+    bookById: (parent: any, args: { id: string }) => {
+      return books.find((book: IBook) => book.id === parseInt(args.id));
+    },
     authors: () => authors,
   },
 };
